@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<constraint-mapping xmlns="http://symfony.com/schema/dic/constraint-mapping"
+                    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                    xsi:schemaLocation="http://symfony.com/schema/dic/constraint-mapping
+                                        https://symfony.com/schema/dic/constraint-mapping/constraint-mapping-1.0.xsd">
+
+    <class name="Borica\Entity\Base">
+        <property name="type">
+            <constraint name="NotBlank" />
+            <constraint name="Length">
+                <option name="max">2</option>
+            </constraint>
+        </property>
+        <property name="order">
+            <constraint name="NotBlank" />
+            <constraint name="Length">
+                <option name="min">6</option>
+                <option name="max">6</option>
+            </constraint>
+        </property>
+        <property name="terminal">
+            <constraint name="NotBlank" />
+            <constraint name="Length">
+                <option name="min">8</option>
+                <option name="max">8</option>
+            </constraint>
+        </property>
+        <property name="nonce">
+            <constraint name="NotBlank" />
+            <constraint name="Length">
+                <option name="min">32</option>
+                <option name="max">32</option>
+            </constraint>
+        </property>
+        <property name="transactionType">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>status</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">2</option>
+            </constraint>
+        </property>
+        <property name="amount">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">12</option>
+            </constraint>
+        </property>
+        <property name="currency">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">3</option>
+                <option name="max">3</option>
+            </constraint>
+        </property>
+        <property name="timestamp">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="DateTime">
+                <option name="format">YmdHis</option>
+            </constraint>
+        </property>
+        <property name="sign">
+            <constraint name="NotBlank" />
+            <constraint name="Length">
+                <option name="min">512</option>
+                <option name="max">512</option>
+            </constraint>
+        </property>
+    </class>
+
+    <class name="Borica\Entity\Request">
+        <property name="email">
+            <constraint name="Email" />
+            <constraint name="Length">
+                <option name="max">80</option>
+            </constraint>
+        </property>
+        <property name="description">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">50</option>
+            </constraint>
+        </property>
+        <property name="merchant">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">10</option>
+                <option name="max">15</option>
+            </constraint>
+        </property>
+        <property name="merchantName">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">80</option>
+            </constraint>
+        </property>
+        <property name="merchantUrl">
+            <constraint name="Length">
+                <option name="max">250</option>
+            </constraint>
+        </property>
+        <property name="merchantGmt">
+            <constraint name="Length">
+                <option name="min">3</option>
+                <option name="max">3</option>
+            </constraint>
+        </property>
+        <property name="mInfo">
+            <constraint name="Length">
+                <option name="max">35000</option>
+            </constraint>
+        </property>
+        <property name="country">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">2</option>
+                <option name="max">2</option>
+            </constraint>
+        </property>
+        <property name="language">
+            <constraint name="Length">
+                <option name="min">2</option>
+                <option name="max">2</option>
+            </constraint>
+        </property>
+        <property name="orderId">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">22</option>
+                <option name="max">22</option>
+            </constraint>
+        </property>
+        <property name="addendum">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="min">5</option>
+                <option name="max">5</option>
+            </constraint>
+        </property>
+    </class>
+</constraint-mapping>

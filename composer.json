@@ -1,0 +1,19 @@
+{
+    "name": "vm-labs/Borica",
+    "description": "Package that enables the communication with BORICA via their API",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": "^7.1.3",
+        "symfony/http-client": "^5.1",
+        "symfony/form": "^3.4",
+        "symfony/validator": "^3.4"
+    },
+    "require-dev": {
+    },
+    "autoload": {
+        "psr-4": {
+            "Borica\\": "src"
+        }
+    }
+}

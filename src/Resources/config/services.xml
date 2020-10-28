@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://symfony.com/schema/dic/services
+                               http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <defaults autowire="true" autoconfigure="true" public="false">
+            <bind key="$validator" type="service" id="validator" />
+            <bind key="$formFactory" type="service" id="form.factory" />
+            <bind key="$requestStack" type="service" id="request_stack" />
+        </defaults>
+
+        <service id="borica.request_manager" class="Borica\Manager\RequestManager" public="true" />
+        <service id="Borica\Manager\RequestManager" alias="borica.request_manager" public="false" />
+
+        <service id="borica.response_manager" class="Borica\Manager\ResponseManager" public="true" />
+        <service id="Borica\Manager\ResponseManager" alias="borica.response_manager" public="false" />
+
+        <service id="borica.form.type_extension" class="Borica\Form\Extension\HiddenTypeExtension">
+            <tag name="form.type_extension" extended-type="Symfony\Component\Form\Extension\Core\Type\HiddenType" />
+        </service>
+    </services>
+</container>
