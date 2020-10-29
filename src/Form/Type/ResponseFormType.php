@@ -32,7 +32,7 @@ class ResponseFormType extends AbstractType
                 'property_path' => 'action',
             ])
             ->add('RC', HiddenType::class, [
-                'property_path' => 'rc',
+                'property_path' => 'responseCode',
             ])
             ->add('APPROVAL', HiddenType::class, [
                 'property_path' => 'approval',

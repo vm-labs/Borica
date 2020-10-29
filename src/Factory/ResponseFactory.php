@@ -23,7 +23,7 @@ trait ResponseFactory
     {
         return [
             $response->getAction(),
-            $response->getRc(),
+            $response->getResponseCode(),
             $response->getApproval(),
             $response->getTerminal(),
             $response->getType(),
