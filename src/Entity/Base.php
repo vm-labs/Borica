@@ -32,7 +32,7 @@ abstract class Base
     /**
      * @var int
      */
-    private $order;
+    private $orderId;
 
     /**
      * @var /DateTime
@@ -89,14 +89,14 @@ abstract class Base
         return $this->currency;
     }
 
-    public function setOrder(int $order)
+    public function setOrderId(int $orderId)
     {
-        $this->order = $order;
+        $this->orderId = $orderId;
     }
 
-    public function getOrder(): ?int
+    public function getOrderId(): ?int
     {
-        return $this->order;
+        return $this->orderId;
     }
 
     public function setTerminal(string $terminal)

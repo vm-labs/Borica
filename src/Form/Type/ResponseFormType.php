@@ -20,7 +20,7 @@ class ResponseFormType extends AbstractType
                 'property_path' => 'type',
             ])
             ->add('ORDER', HiddenType::class, [
-                'property_path' => 'order',
+                'property_path' => 'orderId',
             ])
             ->add('AMOUNT', HiddenType::class, [
                 'property_path' => 'amount',

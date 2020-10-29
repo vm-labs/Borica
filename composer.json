@@ -1,5 +1,5 @@
 {
-    "name": "vm-labs/Borica",
+    "name": "vm-labs/borica",
     "description": "Package that enables the communication with BORICA via their API",
     "type": "symfony-bundle",
     "license": "MIT",

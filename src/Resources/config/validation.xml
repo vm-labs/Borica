@@ -11,7 +11,7 @@
                 <option name="max">2</option>
             </constraint>
         </property>
-        <property name="order">
+        <property name="orderId">
             <constraint name="NotBlank" />
             <constraint name="Length">
                 <option name="min">6</option>
@@ -153,7 +153,7 @@
                 <option name="max">2</option>
             </constraint>
         </property>
-        <property name="orderId">
+        <property name="boricaOrderId">
             <constraint name="NotBlank">
                 <option name="groups">
                     <value>payment</value>

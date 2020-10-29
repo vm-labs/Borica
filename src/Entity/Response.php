@@ -12,7 +12,7 @@ class Response extends Base
     /**
      * @var string
      */
-    private $rc;
+    private $responseCode;
 
     /**
      * @var string
@@ -64,14 +64,14 @@ class Response extends Base
         return $this->action;
     }
 
-    public function setRc(string $rc)
+    public function setResponseCode(string $responseCode)
     {
-        $this->rc = $rc;
+        $this->responseCode = $responseCode;
     }
 
-    public function getRc(): ?string
+    public function getresponseCode(): ?string
     {
-        return $this->rc;
+        return $this->responseCode;
     }
 
     public function setApproval(?string $approval)
@@ -152,10 +152,5 @@ class Response extends Base
     public function getEci()
     {
         return $this->eci;
-    }
-
-    public function isSuccess()
-    {
-        return $this->rc === '00';
     }
 }

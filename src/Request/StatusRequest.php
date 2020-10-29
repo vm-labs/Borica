@@ -9,20 +9,6 @@ use Symfony\Component\HttpClient\HttpClient;
 
 class StatusRequest extends BaseRequest
 {
-    public function init()
-    {
-        $this->request->setType(Types::STATUS_TRANSACTION);
-        $this->request->setTransactionType(Types::PAYMENT);
-
-        $this->setDefaultData();
-        $this->signMessage();
-    }
-
-    public function getFormType(): string
-    {
-        return StatusRequestFormType::class;
-    }
-
     public function request(string $url)
     {
         $client = HttpClient::create();
@@ -41,5 +27,24 @@ class StatusRequest extends BaseRequest
         $form->submit(json_decode($response->getContent(), true));
 
         return $form->getData();
+    }
+
+    protected function init()
+    {
+        $this->request->setType(Types::STATUS_TRANSACTION);
+        $this->request->setTransactionType(Types::PAYMENT);
+
+        $this->setDefaultData();
+        $this->signMessage();
+    }
+
+    protected function getFormType(): string
+    {
+        return StatusRequestFormType::class;
+    }
+
+    protected function getValidationGroup(): string
+    {
+        return 'status';
     }
 }

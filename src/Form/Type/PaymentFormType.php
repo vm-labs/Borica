@@ -42,7 +42,7 @@ class PaymentFormType extends BaseRequestFormType
             ->add('timestamp', HiddenType::class, [
                 'full_name' => 'TIMESTAMP',
             ])
-            ->add('orderId', HiddenType::class, [
+            ->add('boricaOrderId', HiddenType::class, [
                 'full_name' => 'AD.CUST_BOR_ORDER_ID',
             ])
             ->add('addendum', HiddenType::class, [

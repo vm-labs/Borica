@@ -52,7 +52,7 @@ class Request extends Base
     /**
      * @var string
      */
-    private $orderId;
+    private $boricaOrderId;
 
     /**
      * @var string
@@ -160,14 +160,14 @@ class Request extends Base
         return $this->language;
     }
 
-    public function setOrderId(?string $orderId)
+    public function setBoricaOrderId(?string $boricaOrderId)
     {
-        $this->orderId = $orderId;
+        $this->boricaOrderId = $boricaOrderId;
     }
 
-    public function getOrderId(): ?string
+    public function getBoricaOrderId(): ?string
     {
-        return $this->orderId;
+        return $this->boricaOrderId;
     }
 
     public function setAddendum(?string $addendum)

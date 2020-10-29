@@ -41,12 +41,12 @@ class BoricaResponse
 
     public function isSuccessful(): bool
     {
-        return $this->response->getRc() === '00';
+        return $this->response->getresponseCode() === '00';
     }
 
     public function getResponseCode()
     {
-        return $this->response->getRc();
+        return $this->response->getresponseCode();
     }
 
     public function getData(): Response

@@ -8,7 +8,7 @@ use Borica\Types;
 
 class PaymentRequest extends BaseRequest
 {
-    public function init()
+    protected function init()
     {
         $this->request->setType(Types::PAYMENT);
 
@@ -16,8 +16,13 @@ class PaymentRequest extends BaseRequest
         $this->signMessage();
     }
 
-    public function getFormType(): string
+    protected function getFormType(): string
     {
         return PaymentFormType::class;
+    }
+
+    protected function getValidationGroup(): string
+    {
+        return 'payment';
     }
 }

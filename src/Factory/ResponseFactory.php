@@ -29,7 +29,7 @@ trait ResponseFactory
             $response->getType(),
             $response->getAmount(),
             $response->getCurrency(),
-            $response->getOrder(),
+            $response->getOrderId(),
             $response->getRrn(),
             $response->getIntRef(),
             $response->getParesStatus(),
@@ -54,7 +54,7 @@ trait ResponseFactory
             $response->getTerminal(),
             $response->getType(),
             $response->getAmount(),
-            $response->getOrder(),
+            $response->getOrderId(),
             $response->getTimestamp(),
         ];
     }

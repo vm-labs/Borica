@@ -25,7 +25,7 @@ trait RequestFactory
             return [
                 $request->getTerminal(),
                 $request->getType(),
-                $request->getOrder(),
+                $request->getOrderId(),
                 $request->getNonce(),
             ];
         }
@@ -35,7 +35,7 @@ trait RequestFactory
             $request->getType(),
             $request->getAmount(),
             $request->getCurrency(),
-            $request->getOrder(),
+            $request->getOrderId(),
             $request->getMerchant(),
             $request->getTimestamp(),
             $request->getNonce(),
@@ -58,7 +58,7 @@ trait RequestFactory
             return [
                 $request->getTerminal(),
                 $request->getType(),
-                $request->getOrder(),
+                $request->getOrderId(),
             ];
         }
 
