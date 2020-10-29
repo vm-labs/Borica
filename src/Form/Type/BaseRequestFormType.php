@@ -19,7 +19,7 @@ abstract class BaseRequestFormType extends AbstractType
             ->add('type', HiddenType::class, [
                 'full_name' => 'TRTYPE',
             ])
-            ->add('order', HiddenType::class, [
+            ->add('orderId', HiddenType::class, [
                 'full_name' => 'ORDER',
             ])
             ->add('nonce', HiddenType::class, [
