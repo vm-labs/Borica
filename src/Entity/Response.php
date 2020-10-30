@@ -54,7 +54,7 @@ class Response extends Base
      */
     private $eci;
 
-    public function setAction(int $action)
+    public function setAction(int $action): void
     {
         $this->action = $action;
     }
@@ -64,7 +64,7 @@ class Response extends Base
         return $this->action;
     }
 
-    public function setResponseCode(string $responseCode)
+    public function setResponseCode(string $responseCode): void
     {
         $this->responseCode = $responseCode;
     }
@@ -74,7 +74,7 @@ class Response extends Base
         return $this->responseCode;
     }
 
-    public function setApproval(?string $approval)
+    public function setApproval(?string $approval): void
     {
         $this->approval = $approval;
     }
@@ -84,7 +84,7 @@ class Response extends Base
         return $this->approval;
     }
 
-    public function setRrn(int $rrn)
+    public function setRrn(int $rrn): void
     {
         $this->rrn = $rrn;
     }
@@ -94,7 +94,7 @@ class Response extends Base
         return $this->rrn;
     }
 
-    public function setIntRef(string $intRef)
+    public function setIntRef(string $intRef): void
     {
         $this->intRef = $intRef;
     }
@@ -104,7 +104,7 @@ class Response extends Base
         return $this->intRef;
     }
 
-    public function setStatusMsg(?string $statusMsg)
+    public function setStatusMsg(?string $statusMsg): void
     {
         $this->statusMsg = $statusMsg;
     }
@@ -114,7 +114,7 @@ class Response extends Base
         return $this->statusMsg;
     }
 
-    public function setCard(?string $card)
+    public function setCard(?string $card): void
     {
         $this->card = $card;
     }
@@ -134,7 +134,7 @@ class Response extends Base
         return $this->tranDate;
     }
 
-    public function setParesStatus(?string $status)
+    public function setParesStatus(?string $status): void
     {
         $this->paresStatus = $status;
     }
@@ -144,7 +144,7 @@ class Response extends Base
         return $this->paresStatus;
     }
 
-    public function setEci($eci)
+    public function setEci($eci): void
     {
         $this->eci = $eci;
     }

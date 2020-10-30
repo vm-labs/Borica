@@ -9,7 +9,7 @@ use function sprintf;
 
 trait RequestFactory
 {
-    public function getRequestMessage(Request $request, bool $extendedMac = true)
+    public function getRequestMessage(Request $request, bool $extendedMac = true): string
     {
         $fields = $extendedMac ? $this->getRequestExtendedFields($request) : $this->getRequestCommonFields($request);
 
@@ -21,7 +21,7 @@ trait RequestFactory
         return $message;
     }
 
-    private function getRequestExtendedFields(Request $request)
+    private function getRequestExtendedFields(Request $request): array
     {
         if (Types::STATUS_TRANSACTION === $request->getType()) {
             return [
@@ -44,7 +44,7 @@ trait RequestFactory
         ];
     }
 
-    private function getRequestCommonFields(Request $request)
+    private function getRequestCommonFields(Request $request): array
     {
         if (Types::PAYMENT === $request->getType()) {
             return [

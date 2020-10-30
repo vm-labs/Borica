@@ -10,7 +10,7 @@ use function sprintf;
 
 trait ResponseFactory
 {
-    public function getResponseMessage(Response $response, bool $extendedMac = true)
+    public function getResponseMessage(Response $response, bool $extendedMac = true): string
     {
         $fields = $extendedMac ? $this->getResponseExtendedFields($response) : $this->getResponseCommonFields($response);
 
@@ -22,7 +22,7 @@ trait ResponseFactory
         return $message;
     }
 
-    private function getResponseExtendedFields(Response $response)
+    private function getResponseExtendedFields(Response $response): array
     {
         return [
             $response->getAction(),
@@ -42,7 +42,7 @@ trait ResponseFactory
         ];
     }
 
-    private function getResponseCommonFields(Response $response)
+    private function getResponseCommonFields(Response $response): array
     {
         if (in_array($response->getType(), [Types::PAYMENT, Types::STATUS_TRANSACTION])) {
             return [

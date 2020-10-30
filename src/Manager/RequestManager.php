@@ -47,7 +47,7 @@ class RequestManager
         $this->configs = $configs;
     }
 
-    public function payment(Request $request, string $configName = '')
+    public function payment(Request $request, string $configName = ''): PaymentRequest
     {
         return new PaymentRequest(
             $this->validator,
@@ -58,7 +58,7 @@ class RequestManager
         );
     }
 
-    public function status(Request $request, string $configName = '')
+    public function status(Request $request, string $configName = ''): StatusRequest
     {
         return new StatusRequest(
             $this->validator,
@@ -69,7 +69,7 @@ class RequestManager
         );
     }
 
-    public function cancellation(Request $request, string $configName = '')
+    public function cancellation(Request $request, string $configName = ''): CancellationRequest
     {
         return new CancellationRequest(
             $this->validator,

@@ -72,7 +72,7 @@ class Request extends Base
         $this->setTimestamp($date->format('YmdHis'));
     }
 
-    public function setDescription(string $description)
+    public function setDescription(string $description): void
     {
         $this->description = $description;
     }
@@ -82,7 +82,7 @@ class Request extends Base
         return $this->description;
     }
 
-    public function setMerchant(?string $merchant)
+    public function setMerchant(?string $merchant): void
     {
         $this->merchant = $merchant;
     }
@@ -92,7 +92,7 @@ class Request extends Base
         return $this->merchant;
     }
 
-    public function setMerchantName(?string $merchantName)
+    public function setMerchantName(?string $merchantName): void
     {
         $this->merchantName = $merchantName;
     }
@@ -102,7 +102,7 @@ class Request extends Base
         return $this->merchantName;
     }
 
-    public function setMerchantUrl(string $merchantUrl)
+    public function setMerchantUrl(string $merchantUrl): void
     {
         $this->merchantUrl = $merchantUrl;
     }
@@ -112,7 +112,7 @@ class Request extends Base
         return $this->merchantUrl;
     }
 
-    public function setMerchantGmt(?int $merchantGmt)
+    public function setMerchantGmt(?int $merchantGmt): void
     {
         $this->merchantGmt = $merchantGmt;
     }
@@ -122,7 +122,7 @@ class Request extends Base
         return $this->merchantGmt;
     }
 
-    public function setMInfo(?string $info)
+    public function setMInfo(?string $info): void
     {
         $this->mInfo = $info;
     }
@@ -132,7 +132,7 @@ class Request extends Base
         return $this->mInfo;
     }
 
-    public function setEmail(?string $email)
+    public function setEmail(?string $email): void
     {
         $this->email = $email;
     }
@@ -142,7 +142,7 @@ class Request extends Base
         return $this->email;
     }
 
-    public function setCountry(?string $country)
+    public function setCountry(?string $country): void
     {
         $this->country = $country;
     }
@@ -152,7 +152,7 @@ class Request extends Base
         return $this->country;
     }
 
-    public function setLanguage(?string $language)
+    public function setLanguage(?string $language): void
     {
         $this->language = $language;
     }
@@ -162,7 +162,7 @@ class Request extends Base
         return $this->language;
     }
 
-    public function setBoricaOrderId(?string $boricaOrderId)
+    public function setBoricaOrderId(?string $boricaOrderId): void
     {
         $this->boricaOrderId = $boricaOrderId;
     }
@@ -172,7 +172,7 @@ class Request extends Base
         return $this->boricaOrderId;
     }
 
-    public function setAddendum(?string $addendum)
+    public function setAddendum(?string $addendum): void
     {
         $this->addendum = $addendum;
     }
@@ -182,7 +182,7 @@ class Request extends Base
         return $this->addendum;
     }
 
-    public function setBackref(string $backref)
+    public function setBackref(string $backref): void
     {
         $this->backref = $backref;
     }

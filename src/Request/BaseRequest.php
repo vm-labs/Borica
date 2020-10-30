@@ -88,13 +88,13 @@ abstract class BaseRequest implements RequestInterface
         ])->getForm();
     }
 
-    protected function signMessage()
+    protected function signMessage(): void
     {
         $message = $this->getRequestMessage($this->request, $this->config['extended_mac']);
         $this->request->setSign($this->sign($message, $this->config));
     }
 
-    protected function setDefaultData()
+    protected function setDefaultData(): void
     {
         $this->request->setTerminal($this->config['terminal_id']);
         $this->request->setMerchant($this->config['merchant']);

@@ -8,7 +8,7 @@ use Borica\Types;
 
 class PaymentRequest extends BaseRequest
 {
-    protected function init()
+    protected function init(): void
     {
         $this->request->setType(Types::PAYMENT);
 

@@ -22,7 +22,7 @@ abstract class Base
     private $transactionType;
 
     /**
-     * @var string|float|integer
+     * @var float
      */
     private $amount;
 
@@ -51,7 +51,7 @@ abstract class Base
      */
     private $sign;
 
-    public function setType(int $type)
+    public function setType(int $type): void
     {
         $this->type = $type;
     }
@@ -61,7 +61,7 @@ abstract class Base
         return $this->type;
     }
 
-    public function setTransactionType(?int $transactionType)
+    public function setTransactionType(?int $transactionType): void
     {
         $this->transactionType = $transactionType;
     }
@@ -71,17 +71,17 @@ abstract class Base
         return $this->transactionType;
     }
 
-    public function setAmount($amount)
+    public function setAmount(float $amount): void
     {
         $this->amount = number_format($amount, 2, '.', '');
     }
 
-    public function getAmount()
+    public function getAmount(): ?float
     {
         return $this->amount;
     }
 
-    public function setCurrency(?string $currency)
+    public function setCurrency(?string $currency): void
     {
         $this->currency = $currency;
     }
@@ -91,7 +91,7 @@ abstract class Base
         return $this->currency;
     }
 
-    public function setOrderId(int $orderId)
+    public function setOrderId(int $orderId): void
     {
         $this->orderId = $orderId;
     }
@@ -101,7 +101,7 @@ abstract class Base
         return $this->orderId;
     }
 
-    public function setTerminal(string $terminal)
+    public function setTerminal(string $terminal): void
     {
         $this->terminal = $terminal;
     }
@@ -111,17 +111,17 @@ abstract class Base
         return $this->terminal;
     }
 
-    public function setTimestamp(string $timestamp)
+    public function setTimestamp(string $timestamp): void
     {
         $this->timestamp = $timestamp;
     }
 
-    public function getTimestamp()
+    public function getTimestamp(): ?string
     {
         return $this->timestamp;
     }
 
-    public function setNonce(?string $nonce)
+    public function setNonce(?string $nonce): void
     {
         $this->nonce = $nonce;
     }
@@ -131,7 +131,7 @@ abstract class Base
         return $this->nonce;
     }
 
-    public function setSign(string $sign)
+    public function setSign(string $sign): void
     {
         $this->sign = $sign;
     }

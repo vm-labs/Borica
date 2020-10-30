@@ -30,7 +30,7 @@ class StatusRequest extends BaseRequest
         return new BoricaResponse($form->getData(), $this->config);
     }
 
-    protected function init()
+    protected function init(): void
     {
         $this->request->setType(Types::STATUS_TRANSACTION);
         $this->request->setTransactionType(Types::PAYMENT);
