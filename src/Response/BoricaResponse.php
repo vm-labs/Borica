@@ -24,19 +24,19 @@ class BoricaResponse
     /**
      * @var bool
      */
-    private $validData;
+    private $valid;
 
     public function __construct(Response $response, array $config)
     {
         $this->response = $response;
         $this->config = $config;
 
-        $this->validData = $this->verifySignature();
+        $this->valid = $this->verifySignature();
     }
 
-    public function isValidData(): bool
+    public function isValid(): bool
     {
-        return $this->validData;
+        return $this->valid;
     }
 
     public function isSuccessful(): bool
