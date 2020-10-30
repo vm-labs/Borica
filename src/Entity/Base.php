@@ -2,6 +2,8 @@
 
 namespace Borica\Entity;
 
+use function number_format;
+
 abstract class Base
 {
     /**

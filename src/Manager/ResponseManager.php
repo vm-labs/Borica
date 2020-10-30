@@ -8,6 +8,9 @@ use Borica\Response\BoricaResponse;
 use Symfony\Component\Config\Definition\Exception\Exception;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\HttpFoundation\RequestStack;
+use function array_key_exists;
+use function array_shift;
+use function count;
 
 class ResponseManager
 {

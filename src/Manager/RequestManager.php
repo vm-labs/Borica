@@ -8,6 +8,9 @@ use Borica\Request\StatusRequest;
 use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use function array_key_exists;
+use function array_shift;
+use function count;
 
 class RequestManager
 {

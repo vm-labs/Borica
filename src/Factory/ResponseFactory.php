@@ -4,6 +4,9 @@ namespace Borica\Factory;
 
 use Borica\Entity\Response;
 use Borica\Types;
+use function in_array;
+use function mb_strlen;
+use function sprintf;
 
 trait ResponseFactory
 {

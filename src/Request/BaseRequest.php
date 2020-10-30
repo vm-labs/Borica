@@ -10,6 +10,11 @@ use Symfony\Component\Form\Form;
 use Symfony\Component\Form\FormFactoryInterface;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
+use function bin2hex;
+use function mt_rand;
+use function openssl_random_pseudo_bytes;
+use function str_pad;
+use function strtoupper;
 
 abstract class BaseRequest implements RequestInterface
 {

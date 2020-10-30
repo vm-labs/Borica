@@ -2,6 +2,8 @@
 
 namespace Borica\Entity;
 
+use DateTime;
+
 class Request extends Base
 {
     /**
@@ -66,7 +68,7 @@ class Request extends Base
 
     public function __construct()
     {        
-        $date = new \DateTime();
+        $date = new DateTime();
         $this->setTimestamp($date->format('YmdHis'));
     }
 

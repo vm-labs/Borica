@@ -5,6 +5,19 @@ namespace Borica\Manager;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\Exception\FileNotFoundException;
 use Symfony\Component\Routing\Exception\InvalidParameterException;
+use function bin2hex;
+use function fclose;
+use function file_exists;
+use function filesize;
+use function fopen;
+use function fread;
+use function hex2bin;
+use function openssl_free_key;
+use function openssl_get_privatekey;
+use function openssl_get_publickey;
+use function openssl_sign;
+use function openssl_verify;
+use function strtoupper;
 
 trait CertificateManager
 {

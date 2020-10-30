@@ -4,6 +4,8 @@ namespace Borica\Factory;
 
 use Borica\Entity\Request;
 use Borica\Types;
+use function mb_strlen;
+use function sprintf;
 
 trait RequestFactory
 {
