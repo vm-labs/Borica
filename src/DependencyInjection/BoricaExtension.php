@@ -31,12 +31,12 @@ class BoricaExtension extends Extension
         $env = $container->getParameter('kernel.environment');
         $definition = $container->getDefinition('borica.request_manager');
         $definition->setArgument(2, $env === 'dev' ? $config['test_url'] : $config['prod_url']);
-        $definition->setArgument(3, $config['certificates']);
+        $definition->setArgument(3, $config['profiles']);
     }
 
     private function setResponseManagerDefinitions(ContainerBuilder $container, array $config)
     {
         $definition = $container->getDefinition('borica.response_manager');
-        $definition->setArgument(2, $config['certificates']);
+        $definition->setArgument(2, $config['profiles']);
     }
 }

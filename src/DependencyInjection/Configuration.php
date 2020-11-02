@@ -21,7 +21,7 @@ class Configuration implements ConfigurationInterface
                     ->defaultValue('https://3dsgate.borica.bg/cgi-bin/cgi_link')
                 ->end()
 
-                ->arrayNode('certificates')
+                ->arrayNode('profiles')
                     ->arrayPrototype()
                         ->children()
                             ->scalarNode('merchant')->end()

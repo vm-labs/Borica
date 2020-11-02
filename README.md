@@ -30,7 +30,7 @@ borica_api:
     test_url: # default https://3dsgate-dev.borica.bg/cgi-bin/cgi_link 
     prod_url: # default https://3dsgate.borica.bg/cgi-bin/cgi_link
 
-    certificates:
+    profiles:
         config_1:
             backref_url: https://localhost/borica/response
             terminal_id: # terminal id
@@ -153,7 +153,7 @@ class StatusRequestController extends AbstractController
 
 ### Credit cards
 
- Cart number      | Response code        | 3DS password
+ Card number      | Response code        | 3DS password
 ------------------|:--------------------:|-------------:
  5100770000000022 | **00**               | -
  4341792000000044 | **00**               | 111111
