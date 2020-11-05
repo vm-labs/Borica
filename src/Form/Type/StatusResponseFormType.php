@@ -17,12 +17,10 @@ class StatusResponseFormType extends AbstractType
             ->add('actionCode', HiddenType::class, [
                 'property_path' => 'action',
             ])
-            ->add('responseCode', HiddenType::class, [
-                'property_path' => 'rc',
-            ])
+            ->add('responseCode', HiddenType::class)
             ->add('statusMsg', HiddenType::class)
             ->add('orderID', HiddenType::class, [
-                'property_path' => 'order',
+                'property_path' => 'orderId',
             ])
             ->add('tr_type', HiddenType::class, [
                 'property_path' => 'type',

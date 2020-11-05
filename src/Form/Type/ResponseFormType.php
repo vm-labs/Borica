@@ -65,7 +65,7 @@ class ResponseFormType extends AbstractType
                 'property_path' => 'eci',
             ])
             ->add('NONCE', HiddenType::class, [
-                'property_path' => 'nonce'
+                'property_path' => 'nonce',
             ])
             ->add('P_SIGN', HiddenType::class, [
                 'property_path' => 'sign',
