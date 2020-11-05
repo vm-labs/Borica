@@ -2,6 +2,7 @@
 
 namespace Borica\Request;
 
+use Borica\Entity\Response;
 use Borica\Form\Type\StatusRequestFormType;
 use Borica\Form\Type\StatusResponseFormType;
 use Borica\Response\BoricaResponse;
