@@ -3,6 +3,7 @@
 namespace Borica\Manager;
 
 use Borica\Entity\Request;
+use Borica\Request\CancellationRequest;
 use Borica\Request\PaymentRequest;
 use Borica\Request\StatusRequest;
 use Symfony\Component\DependencyInjection\Exception\ParameterNotFoundException;
