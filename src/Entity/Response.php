@@ -20,16 +20,6 @@ class Response extends Base
     private $approval;
 
     /**
-     * @var int
-     */
-    private $rrn;
-
-    /**
-     * @var string
-     */
-    private $intRef;
-
-    /**
      * @var string
      */
     private $statusMsg;
@@ -40,7 +30,7 @@ class Response extends Base
     private $card;
 
     /**
-     * @var \DateTime
+     * @var string
      */
     private $tranDate;
 
@@ -53,6 +43,11 @@ class Response extends Base
      * @var int
      */
     private $eci;
+
+    /**
+     * @var string
+     */
+    private $amount;
 
     public function setAction(int $action): void
     {
@@ -84,26 +79,6 @@ class Response extends Base
         return $this->approval;
     }
 
-    public function setRrn(int $rrn): void
-    {
-        $this->rrn = $rrn;
-    }
-
-    public function getRrn(): ?int
-    {
-        return $this->rrn;
-    }
-
-    public function setIntRef(string $intRef): void
-    {
-        $this->intRef = $intRef;
-    }
-
-    public function getIntRef(): ?string
-    {
-        return $this->intRef;
-    }
-
     public function setStatusMsg(?string $statusMsg): void
     {
         $this->statusMsg = $statusMsg;
@@ -124,12 +99,12 @@ class Response extends Base
         return $this->card;
     }
 
-    public function setTranDate($date)
+    public function setTranDate(?string $date)
     {
         $this->tranDate = $date;
     }
 
-    public function getTranDate()
+    public function getTranDate(): ?string
     {
         return $this->tranDate;
     }
@@ -144,13 +119,23 @@ class Response extends Base
         return $this->paresStatus;
     }
 
-    public function setEci($eci): void
+    public function setEci(int $eci): void
     {
         $this->eci = $eci;
     }
 
-    public function getEci()
+    public function getEci(): ?int
     {
         return $this->eci;
+    }
+
+    public function setAmount(string $amount): void
+    {
+        $this->amount = $amount;
+    }
+
+    public function getAmount(): ?string
+    {
+        return $this->amount;
     }
 }

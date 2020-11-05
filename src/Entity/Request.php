@@ -66,6 +66,11 @@ class Request extends Base
      */
     private $backref;
 
+    /**
+     * @var float
+     */
+    private $amount;
+
     public function __construct()
     {        
         $date = new DateTime();
@@ -190,5 +195,15 @@ class Request extends Base
     public function getBackref(): string
     {
         return $this->backref;
+    }
+
+    public function setAmount(float $amount): void
+    {
+        $this->amount = number_format($amount, 2, '.', '');
+    }
+
+    public function getAmount(): ?float
+    {
+        return $this->amount;
     }
 }

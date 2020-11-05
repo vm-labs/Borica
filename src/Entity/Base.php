@@ -22,11 +22,6 @@ abstract class Base
     private $transactionType;
 
     /**
-     * @var float
-     */
-    private $amount;
-
-    /**
      * @var string
      */
     private $currency = 'BGN';
@@ -37,7 +32,7 @@ abstract class Base
     private $orderId;
 
     /**
-     * @var /DateTime
+     * @var string
      */
     private $timestamp;
 
@@ -50,6 +45,16 @@ abstract class Base
      * @var string
      */
     private $sign;
+
+    /**
+     * @var int
+     */
+    private $rrn;
+
+    /**
+     * @var string
+     */
+    private $intRef;
 
     public function setType(int $type): void
     {
@@ -69,16 +74,6 @@ abstract class Base
     public function getTransactionType(): ?int
     {
         return $this->transactionType;
-    }
-
-    public function setAmount(float $amount): void
-    {
-        $this->amount = number_format($amount, 2, '.', '');
-    }
-
-    public function getAmount(): ?float
-    {
-        return $this->amount;
     }
 
     public function setCurrency(?string $currency): void
@@ -139,5 +134,25 @@ abstract class Base
     public function getSign(): ?string
     {
         return $this->sign;
+    }
+
+    public function setRrn(int $rrn): void
+    {
+        $this->rrn = $rrn;
+    }
+
+    public function getRrn(): ?int
+    {
+        return $this->rrn;
+    }
+
+    public function setIntRef(string $intRef): void
+    {
+        $this->intRef = $intRef;
+    }
+
+    public function getIntRef(): ?string
+    {
+        return $this->intRef;
     }
 }
