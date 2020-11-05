@@ -42,16 +42,6 @@
                 <option name="max">2</option>
             </constraint>
         </property>
-        <property name="amount">
-            <constraint name="NotBlank">
-                <option name="groups">
-                    <value>payment</value>
-                </option>
-            </constraint>
-            <constraint name="Length">
-                <option name="max">12</option>
-            </constraint>
-        </property>
         <property name="currency">
             <constraint name="NotBlank">
                 <option name="groups">
@@ -83,6 +73,16 @@
     </class>
 
     <class name="Borica\Entity\Request">
+        <property name="amount">
+            <constraint name="NotBlank">
+                <option name="groups">
+                    <value>payment</value>
+                </option>
+            </constraint>
+            <constraint name="Length">
+                <option name="max">12</option>
+            </constraint>
+        </property>
         <property name="email">
             <constraint name="Email" />
             <constraint name="Length">
