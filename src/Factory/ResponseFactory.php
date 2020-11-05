@@ -16,7 +16,7 @@ trait ResponseFactory
 
         $message = '';
         foreach ($fields as $field) {
-            $message .= sprintf('%s%s', mb_strlen($field), $field);
+            $message .= is_null($field) ? '1-' : sprintf('%s%s', mb_strlen($field), $field);
         }
 
         return $message;
