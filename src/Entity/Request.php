@@ -49,22 +49,12 @@ class Request extends Base
     /**
      * @var string
      */
-    private $language;
-
-    /**
-     * @var string
-     */
     private $boricaOrderId;
 
     /**
      * @var string
      */
     private $addendum;
-
-    /**
-     * @var string
-     */
-    private $backref;
 
     /**
      * @var float
@@ -157,16 +147,6 @@ class Request extends Base
         return $this->country;
     }
 
-    public function setLanguage(?string $language): void
-    {
-        $this->language = $language;
-    }
-
-    public function getLanguage(): ?string
-    {
-        return $this->language;
-    }
-
     public function setBoricaOrderId(?string $boricaOrderId): void
     {
         $this->boricaOrderId = $boricaOrderId;
@@ -185,16 +165,6 @@ class Request extends Base
     public function getAddendum(): ?string
     {
         return $this->addendum;
-    }
-
-    public function setBackref(string $backref): void
-    {
-        $this->backref = $backref;
-    }
-
-    public function getBackref(): string
-    {
-        return $this->backref;
     }
 
     public function setAmount(float $amount): void

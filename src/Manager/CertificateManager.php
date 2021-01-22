@@ -14,7 +14,7 @@ use function fread;
 use function hex2bin;
 use function openssl_free_key;
 use function openssl_get_privatekey;
-use function openssl_get_publickey;
+use function openssl_pkey_get_public;
 use function openssl_sign;
 use function openssl_verify;
 use function strtoupper;
@@ -25,7 +25,7 @@ trait CertificateManager
     {
         $key = $this->readKey($config['public_key']);
 
-        if (!$publicKey = openssl_get_publickey($key)) {
+        if (!$publicKey = openssl_pkey_get_public($key)) {
             throw new InvalidParameterException("Could not get public key!");
         }
 

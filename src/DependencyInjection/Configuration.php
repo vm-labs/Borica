@@ -27,7 +27,6 @@ class Configuration implements ConfigurationInterface
                             ->scalarNode('merchant')->end()
                             ->scalarNode('merchant_name')->end()
                             ->scalarNode('merchant_url')->end()
-                            ->scalarNode('backref_url')->end()
                             ->scalarNode('terminal_id')
                                 ->isRequired()
                                 ->cannotBeEmpty()

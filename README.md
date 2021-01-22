@@ -32,7 +32,6 @@ borica_api:
 
     profiles:
         config_1:
-            backref_url: https://localhost/borica/response
             terminal_id: # terminal id
             private_key: # path to private key
             private_key_password: # private key password

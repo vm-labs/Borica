@@ -25,11 +25,11 @@ abstract class BaseRequestFormType extends AbstractType
             ->add('nonce', HiddenType::class, [
                 'full_name' => 'NONCE',
             ])
-            ->add('backref', HiddenType::class, [
-                'full_name' => 'BACKREF',
-            ])
             ->add('sign', HiddenType::class, [
                 'full_name' => 'P_SIGN',
+            ])
+            ->add('lang', HiddenType::class, [
+                'full_name' => 'LANG',
             ])
         ;
     }

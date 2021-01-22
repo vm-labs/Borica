@@ -56,6 +56,11 @@ abstract class Base
      */
     private $intRef;
 
+    /**
+     * @var string
+     */
+    private $language = 'BG';
+
     public function setType(int $type): void
     {
         $this->type = $type;
@@ -154,5 +159,15 @@ abstract class Base
     public function getIntRef(): ?string
     {
         return $this->intRef;
+    }
+
+    public function setLanguage(?string $language): void
+    {
+        $this->language = $language;
+    }
+
+    public function getLanguage(): ?string
+    {
+        return $this->language;
     }
 }

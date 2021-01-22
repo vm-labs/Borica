@@ -100,7 +100,6 @@ abstract class BaseRequest implements RequestInterface
         $this->request->setMerchant($this->config['merchant']);
         $this->request->setMerchantName($this->config['merchant_name']);
         $this->request->setMerchantUrl($this->config['merchant_url']);
-        $this->request->setBackref($this->config['backref_url']);
         $this->request->setAddendum($this->request->getAddendum() ?? 'AD,TD');
         $this->request->setNonce($this->request->getNonce() ?? strtoupper(bin2hex(openssl_random_pseudo_bytes(16))));
         $this->request->setOrderId($this->request->getOrderId() ?? str_pad(mt_rand(0, 999999), 6, '0', STR_PAD_LEFT));
