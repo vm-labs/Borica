@@ -28,7 +28,7 @@ abstract class BaseRequestFormType extends AbstractType
             ->add('sign', HiddenType::class, [
                 'full_name' => 'P_SIGN',
             ])
-            ->add('lang', HiddenType::class, [
+            ->add('language', HiddenType::class, [
                 'full_name' => 'LANG',
             ])
         ;
