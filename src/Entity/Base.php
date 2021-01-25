@@ -27,7 +27,7 @@ abstract class Base
     private $currency = 'BGN';
 
     /**
-     * @var int
+     * @var string
      */
     private $orderId;
 
@@ -47,7 +47,7 @@ abstract class Base
     private $sign;
 
     /**
-     * @var int
+     * @var string
      */
     private $rrn;
 
@@ -91,12 +91,12 @@ abstract class Base
         return $this->currency;
     }
 
-    public function setOrderId(int $orderId): void
+    public function setOrderId(string $orderId): void
     {
         $this->orderId = $orderId;
     }
 
-    public function getOrderId(): ?int
+    public function getOrderId(): ?string
     {
         return $this->orderId;
     }
@@ -141,12 +141,12 @@ abstract class Base
         return $this->sign;
     }
 
-    public function setRrn(int $rrn): void
+    public function setRrn(string $rrn): void
     {
         $this->rrn = $rrn;
     }
 
-    public function getRrn(): ?int
+    public function getRrn(): ?string
     {
         return $this->rrn;
     }
