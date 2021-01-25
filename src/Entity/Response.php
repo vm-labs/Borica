@@ -40,7 +40,7 @@ class Response extends Base
     private $paresStatus;
 
     /**
-     * @var int
+     * @var string
      */
     private $eci;
 
@@ -119,12 +119,12 @@ class Response extends Base
         return $this->paresStatus;
     }
 
-    public function setEci(int $eci): void
+    public function setEci(string $eci): void
     {
         $this->eci = $eci;
     }
 
-    public function getEci(): ?int
+    public function getEci(): ?string
     {
         return $this->eci;
     }
