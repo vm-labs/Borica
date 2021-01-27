@@ -20,6 +20,20 @@ Install using composer:
 composer require vm-labs/borica
 ```
 
+Enable the Bundle
+```php
+# config/bundles.php
+
+<?php
+
+return [
+    ...
+
+    Borica\BoricaBundle::class => ['all' => true],
+];
+
+```
+
 ### Configuration
 
 ```yaml
